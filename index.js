@@ -86,3 +86,28 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+console.log ("Financial Analisis");
+console.log ("-------------------");
+
+//THE TOTAL NUMBER OF MONTH INCLUDED IN THE DATASET//
+
+//Extract month-year string and store them in a Set to ensure uniqueness//
+
+var monthYearSet = new Set(finances.map(item => item[0]));
+
+//Calculate the total number of unique month-year strings//
+
+var totalMonths = monthYearSet.size;
+
+console.log("Total months: " + totalMonths);
+
+//THE NET TOTAL AMOUNT OF PROFIT/LOSSES OVER THE ENTIRE PERIOD//
+
+var totalProfitLoss = 0;
+
+for (var i = 0; i < finances.length; i++) {
+  totalProfitLoss += finances[i][1];
+}
+
+console.log("Total: $" + totalProfitLoss);
