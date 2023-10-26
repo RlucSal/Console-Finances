@@ -145,20 +145,46 @@ var count = 0;
 
 for (let i = 1; i < finances.length; i++) {
 
-  // Calculate the change in profit/loss for the current month
-
   var currentMonthProfit = finances[i][1];
   var previousMonthProfit = finances[i - 1][1];
   var change = currentMonthProfit - previousMonthProfit;
-
-  // Sum up the changes and increment the count
 
   totalChange += change;
   count++;
 }
 
-// Calculate the average change
-
 var averageChange = totalChange / count;
 
 console.log('Average Change: ' + averageChange);
+
+
+//THE GREATEST INCREASE IN PROFITS (DATE AND AMOUNT) OVER THE ENTIRE PERIOD
+
+//var greatestIncrease = { date: "", amount: 0 };: This line initializes an object called greatestIncrease with two properties: date and amount. These properties will be used to store the date and the amount of the greatest increase in profit/loss. Initially, date is an empty string, and amount is set to 0.
+
+ //used a for loop to iterate through the finances array, starting from the second element (index 1) and moving to following months.
+
+//Inside the loop, it calculates the change in profit/loss for the current month by subtracting the profit/loss of the previous month from the profit/loss of the current month. This calculates how much the profit/loss has changed from the previous month. (I did this operation in the last exercise)
+
+//Then checks whatever the change calculated for the current month is greater than the amount stored in the greatestIncrease object, which represents the greatest increase found.
+
+//If the current change is greater, it updates the greatestIncrease object by setting the date to the date of the current month and the amount to the current change. This keeps track of the greatest increase in profit/loss.
+
+var greatestIncrease = { date: "", amount: 0 };
+
+for (let i = 1; i < finances.length; i++) {
+  var currentMonthProfit = finances[i][1];
+  var previousMonthProfit = finances[i - 1][1];
+  var change = currentMonthProfit - previousMonthProfit;
+  
+  
+  if (change > greatestIncrease.amount) {
+    greatestIncrease.amount = change;
+    greatestIncrease.date = finances[i][0];
+  }
+}
+
+console.log('Greatest Increase in profit/losses:');
+
+console.log('Date: ' +  greatestIncrease.date + ' Amount: $' + greatestIncrease.amount);
+
