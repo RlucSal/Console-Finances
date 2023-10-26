@@ -92,6 +92,16 @@ console.log ("-------------------");
 
 //THE TOTAL NUMBER OF MONTH INCLUDED IN THE DATASET//
 
+//finances is an array of arrays where each sub-array contains financial data for a specific month-year.
+
+//finances.map(item => item[0]) is a map operation that iterates through each sub-array in the finances array and extracts the first element of each sub-array (index 0), which is the month-year string. This creates a new array that contains only the month-year values.
+
+//new Set is used to create a JavaScript Set. A Set is a built-in data structure in JavaScript that only stores unique values. It ensures that there are no duplicate values in the set. In this case, it's used to eliminate duplicate month-year values from the array created in the previous step.
+
+//So, the monthYearSet will contain a unique set of month-year strings from the finances array. This can be useful when you want to work with unique month-year combinations or need to check for the presence of specific month-year values without duplicate
+
+
+
 //Extract month-year string and store them in a Set to ensure uniqueness//
 
 var monthYearSet = new Set(finances.map(item => item[0]));
@@ -101,6 +111,8 @@ var monthYearSet = new Set(finances.map(item => item[0]));
 var totalMonths = monthYearSet.size;
 
 console.log("Total months: " + totalMonths);
+
+
 
 //THE NET TOTAL AMOUNT OF PROFIT/LOSSES OVER THE ENTIRE PERIOD//
 
