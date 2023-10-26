@@ -162,7 +162,7 @@ console.log('Average Change: ' + averageChange);
 
 //var greatestIncrease = { date: "", amount: 0 };: This line initializes an object called greatestIncrease with two properties: date and amount. These properties will be used to store the date and the amount of the greatest increase in profit/loss. Initially, date is an empty string, and amount is set to 0.
 
- //used a for loop to iterate through the finances array, starting from the second element (index 1) and moving to following months.
+//used a for loop to iterate through the finances array, starting from the second element (index 1) and moving to following months.
 
 //Inside the loop, it calculates the change in profit/loss for the current month by subtracting the profit/loss of the previous month from the profit/loss of the current month. This calculates how much the profit/loss has changed from the previous month. (I did this operation in the last exercise)
 
@@ -194,7 +194,9 @@ console.log('Date: ' +  greatestIncrease.date + ' Amount: $' + greatestIncrease.
 //Initialize Variables: The code begins by initializing two variables:
 
 //greatestDecreaseAmount: This variable is set to 0 and will be used to keep track of the greatest decrease in profit/loss amount.
+
 //greatestDecreaseDate: This variable is initially an empty string and will be used to store the date associated with the greatest decrease.
+
 //Loop through the Dataset: then enters a loop that iterates through the finances array. It starts from the second element (i = 1) to compare each month's profit/loss with the previous month.
 
 //Calculate the Change: Inside the loop, calculates the change in profit/loss for the current month. It does this by subtracting the profit/loss of the current month from the profit/loss of the previous month. The result is stored in the change variable.
