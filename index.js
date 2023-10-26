@@ -98,15 +98,10 @@ console.log ("-------------------");
 
 //new Set is used to create a JavaScript Set. A Set is a built-in data structure in JavaScript that only stores unique values. It ensures that there are no duplicate values in the set. In this case, it's used to eliminate duplicate month-year values from the array created in the previous step.
 
-//So, the monthYearSet will contain a unique set of month-year strings from the finances array. This can be useful when you want to work with unique month-year combinations or need to check for the presence of specific month-year values without duplicate
+//So, the monthYearSet will contain a unique set of month-year strings from the finances array. This can be useful when you want to check for the presence of specific month-year values without duplicate.
 
-
-
-//Extract month-year string and store them in a Set to ensure uniqueness//
 
 var monthYearSet = new Set(finances.map(item => item[0]));
-
-//Calculate the total number of unique month-year strings//
 
 var totalMonths = monthYearSet.size;
 
@@ -115,6 +110,15 @@ console.log("Total months: " + totalMonths);
 
 
 //THE NET TOTAL AMOUNT OF PROFIT/LOSSES OVER THE ENTIRE PERIOD//
+
+//var totalProfitLoss = 0;: This initializes a variable totalProfitLoss to 0. This variable will be used to keep track of the total profit or loss.
+
+//The for loop iterates through the finances array:
+
+//for (var i = 0; i < finances.length; i++): This loop starts with i at 0, and it continues as long as i is less than the length of the finances array.
+
+//totalProfitLoss += finances[i][1];: In each iteration of the loop, it adds the value at index 1 of the current sub-array in finances to the totalProfitLoss variable. The value at index 1 represents the profit or loss for a specific month.
+
 
 var totalProfitLoss = 0;
 
