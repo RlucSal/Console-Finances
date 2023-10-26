@@ -33,6 +33,11 @@
 5. Tap console to visualise the javaScript results of the operations previously added in the javaScript file
 
 ### Screenshot
+![image](https://github.com/RlucSal/Console-Finances/assets/145674108/e3433416-dadc-4ab5-918e-aa0d7df6d0d5)
+![image](https://github.com/RlucSal/Console-Finances/assets/145674108/ca905172-1aa0-4ac4-a0b0-cab8fb10d9c9)
+![image](https://github.com/RlucSal/Console-Finances/assets/145674108/413ff099-79c5-4fdc-8ccc-259ca77c4d5f)
+![image](https://github.com/RlucSal/Console-Finances/assets/145674108/cc53a4e1-5627-4602-882b-23e1d9832195)
+
 
 ### Link to deployed application:
 
@@ -48,11 +53,13 @@ https://github.com/
 
 
 ## Licence
+
 This project is licensed under the [MIT License] - see LICENSE file for details.
 
 ## Features
 
 ## How to contribute
+
 ### Reporting Issues
 If you encounter a bug or have a suggestion for improvement, please open an issue on our Issue Tracker. When reporting issues, please provide as much detail as possible, including steps to reproduce the problem, your environment, and any relevant code snippets or screenshots.
 
