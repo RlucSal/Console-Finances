@@ -109,7 +109,7 @@ console.log("Total months: " + totalMonths);
 
 
 
-//THE NET TOTAL AMOUNT OF PROFIT/LOSSES OVER THE ENTIRE PERIOD//
+//THE NET TOTAL AMOUNT OF PROFIT/LOSSES OVER THE ENTIRE PERIOD
 
 //var totalProfitLoss = 0;: This initializes a variable totalProfitLoss to 0. This variable will be used to keep track of the total profit or loss.
 
@@ -127,3 +127,38 @@ for (var i = 0; i < finances.length; i++) {
 }
 
 console.log("Total: $" + totalProfitLoss);
+
+// THE AVERAGE OF THE CHANGES IN PROFIT/LOSSES OVER THE ENTIRE PERIOD.
+
+//It initializes two variables, totalChange and count,that initializes at 0, to keep track of the total change and the count of changes, respectively.
+
+//It then loops through the finances array, starting from the second element (index 1), because I need to calculate the change from the second month.
+
+//Inside the loop, it calculates the change in profit/loss for the current month by subtracting the profit/loss of the previous month from the profit/loss of the current month.
+
+//It adds the calculated change to the totalChange and increments the count.
+
+//After the loop, it calculates the average change by dividing totalChange by count.
+
+var totalChange = 0;
+var count = 0;
+
+for (let i = 1; i < finances.length; i++) {
+
+  // Calculate the change in profit/loss for the current month
+
+  var currentMonthProfit = finances[i][1];
+  var previousMonthProfit = finances[i - 1][1];
+  var change = currentMonthProfit - previousMonthProfit;
+
+  // Sum up the changes and increment the count
+
+  totalChange += change;
+  count++;
+}
+
+// Calculate the average change
+
+var averageChange = totalChange / count;
+
+console.log('Average Change: ' + averageChange);
