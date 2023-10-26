@@ -188,3 +188,36 @@ console.log('Greatest Increase in profit/losses:');
 
 console.log('Date: ' +  greatestIncrease.date + ' Amount: $' + greatestIncrease.amount);
 
+
+//THE GREATEST DECREASE IN PROFITS (DATE AND AMOUNT) OVER THE ENTIRE PERIOD
+
+//Initialize Variables: The code begins by initializing two variables:
+
+//greatestDecreaseAmount: This variable is set to 0 and will be used to keep track of the greatest decrease in profit/loss amount.
+//greatestDecreaseDate: This variable is initially an empty string and will be used to store the date associated with the greatest decrease.
+//Loop through the Dataset: then enters a loop that iterates through the finances array. It starts from the second element (i = 1) to compare each month's profit/loss with the previous month.
+
+//Calculate the Change: Inside the loop, calculates the change in profit/loss for the current month. It does this by subtracting the profit/loss of the current month from the profit/loss of the previous month. The result is stored in the change variable.
+
+//Check for Greatest Decrease:  then checks if the change (the current month's change) is smaller (more negative) than the greatestDecreaseAmount (the greatest decrease found). If it is, theen updates greatestDecreaseAmount to the value of change, and it records the corresponding date in greatestDecreaseDate.
+
+
+var greatestDecreaseAmount = 0;
+var greatestDecreaseDate = '';
+
+for (let i = 1; i < finances.length; i++) {
+
+  var currentMonthProfit = finances[i][1];
+  var previousMonthProfit = finances[i - 1][1];
+  var change = currentMonthProfit - previousMonthProfit;
+
+  
+  if (change < greatestDecreaseAmount) {
+    greatestDecreaseAmount = change;
+    greatestDecreaseDate = finances[i][0]; // Record the date
+  }
+}
+
+console.log('Greatest Decrease in Profit/Loss:');
+
+console.log('Date: ' + greatestDecreaseDate + ' Amount: $' + greatestDecreaseAmount);
